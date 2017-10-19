@@ -1,0 +1,19 @@
+"""
+Given an array of size N and a number d, rotate the array to the left by d
+i.e. shift the array elements to the left by d.
+Ex: The array [1, 2, 3, 4, 5] after rotating by 2 gives [3, 4, 5, 1, 2].
+"""
+def array_left_rotation(aList, N, d):
+
+    r = aList[d % N : N] + aList[0 : d % N]
+    print(r)
+
+
+alist = [1, 2, 3, 4, 5, 7, 8, 9, 10]
+array_left_rotation(alist, 10, 2)
+
+
+first = 2
+second = 10
+m = first % second
+print("mod", m)
